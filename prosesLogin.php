@@ -20,7 +20,7 @@
 		$_SESSION['username'] = $hasil['username'];
 		$_SESSION['role'] = $hasil['role'];
 
-		if ($hasil['role'] == 0 || 1) {
+		if ($hasil['role'] == 0 || $hasil['role'] == 1) {
 			header('location:index.php');
 			
 		}else if ($hasil['role'] == 2) {
