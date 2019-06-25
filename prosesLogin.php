@@ -16,7 +16,15 @@
 		header('location:login.php?pesan=gagal');
 
 	}else{
+		$_SESSION['id'] = $hasil['id'];
 		$_SESSION['username'] = $hasil['username'];
-		header('location:index.php');
+		$_SESSION['role'] = $hasil['role'];
+
+		if ($hasil['role'] == 0 || 1) {
+			header('location:index.php');
+			
+		}else if ($hasil['role'] == 2) {
+			header('location:index2.php');
+		}
 	}
  ?>
