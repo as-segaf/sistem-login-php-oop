@@ -7,7 +7,6 @@
 		<?php 
 			session_start();
 			if (!isset($_SESSION['username'])) {
-				$_SESSION['message'] = "Anda belum login";
 				header('location:login.php');
 
 			}else{
